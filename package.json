@@ -20,11 +20,7 @@
   },
   "homepage": "https://github.com/NodeWorkshops/graphql-with-tdd#readme",
   "dependencies": {
-    "apollo-server-express": "^1.1.2",
-    "body-parser": "^1.18.1",
-    "express": "^4.15.4",
-    "graphql": "^0.11.3",
-    "graphql-tools": "^1.2.2"
+    "express": "^4.15.4"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
