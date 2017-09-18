@@ -9,14 +9,19 @@ const PORT = 3000
 const app = express()
 
 const typeDefs = `
+  type Status {
+    code: Int
+    message: String    
+  }
+
   type Query {
-    status: String    
+    status: Status    
   }
 `
 
 const resolvers = {
   Query: {
-    status: () => "GrpahQL status: OK"
+    status: () => ({ code: 200, msg: "OK" })
   }
 }
 
