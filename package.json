@@ -1,0 +1,32 @@
+{
+  "name": "graphql-with-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "server": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeWorkshops/graphql-with-tdd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NodeWorkshops/graphql-with-tdd/issues"
+  },
+  "homepage": "https://github.com/NodeWorkshops/graphql-with-tdd#readme",
+  "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "graphql": "^0.11.3",
+    "graphql-tools": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
