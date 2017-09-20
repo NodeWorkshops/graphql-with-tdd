@@ -15,14 +15,21 @@ const typeDefs = `
     lastUpdated: String 
   }
 
+  type CPU {
+    model: String
+    speed: Int
+  }
+
   type Query {
     status: Status    
+    cpuDetails(cpuNumber: Int): CPU
   }
 `
 
 const resolvers = {
   Query: {
-    status: () => ({ code: 200, msg: "OK" })
+    status: () => ({ code: 200, msg: "OK" }),
+    cpuDetails: (obj, args) => os.cpus()[args.cpuNumber]
   },
   Status: {
     code: (obj) => obj.code,
