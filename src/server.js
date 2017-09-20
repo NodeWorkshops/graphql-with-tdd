@@ -36,6 +36,10 @@ const resolvers = {
     code: (obj) => obj.code,
     message: (obj) => obj.msg,
     lastUpdated: () => new Date().toString()
+  },
+  CPU: {
+    model: (cpu) => cpu.model,
+    speed: (cpu) => cpu.speed
   }
 }
 
