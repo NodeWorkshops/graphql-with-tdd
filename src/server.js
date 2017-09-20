@@ -19,6 +19,15 @@ const typeDefs = `
   type CPU {
     model: String
     speed: Int
+    times: Times
+  }
+
+  type Times {
+    user: Int 
+    nice: Int 
+    sys: Int 
+    idle: Int 
+    irq: Int 
   }
 
   type Query {
@@ -39,7 +48,15 @@ const resolvers = {
   },
   CPU: {
     model: (cpu) => cpu.model,
-    speed: (cpu) => cpu.speed
+    speed: (cpu) => cpu.speed,
+    times: (cpu) => cpu.times
+  },
+  Times: {
+    user: (times) => times.user,
+    nice: (times) => times.nice,
+    sys: (times) => times.sys,
+    idle: (times) => times.idle,
+    irq: (times) => times.irq
   }
 }
 
