@@ -25,7 +25,6 @@ const graphQLSchema =  makeExecutableSchema({
   resolvers,
 });
 
-app.get('/status', (req, res) => res.send('Express status: OK'))
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.use('/graphql', bodyparser.json(), graphqlExpress({ schema: graphQLSchema }))
