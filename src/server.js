@@ -44,21 +44,8 @@ const resolvers = {
     cpuList: () =>  os.cpus()
   },
   Status: {
-    code: (obj) => obj.code,
     message: (obj) => obj.msg,
     lastUpdated: () => new Date().toString()
-  },
-  CPU: {
-    model: (cpu) => cpu.model,
-    speed: (cpu) => cpu.speed,
-    times: (cpu) => cpu.times
-  },
-  Times: {
-    user: (times) => times.user,
-    nice: (times) => times.nice,
-    sys: (times) => times.sys,
-    idle: (times) => times.idle,
-    irq: (times) => times.irq
   }
 }
 
