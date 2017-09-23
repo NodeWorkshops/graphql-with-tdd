@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "server": "node ./src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage"
+ 
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageFormats": ["json", "html"]
   },
   "repository": {
     "type": "git",
