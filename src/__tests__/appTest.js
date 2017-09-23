@@ -9,7 +9,7 @@ describe('Graphql status', () => {
             .post('/graphql')
             .send({'query': 'query  { status }'})
         expect(response.statusCode).toBe(200)
-        expect(response.body.data.status).toBe("GrpahQL status: OK")
+        expect(response.body).toMatchSnapshot();
     });
  });
  
