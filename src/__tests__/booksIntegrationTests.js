@@ -1,4 +1,5 @@
 // ./src/booksIntegrationTests.js
+jest.mock('axios')
 
 const request = require('supertest')
 const app = require('../app')

@@ -8,11 +8,13 @@
     "server": "node ./src/server.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage"
- 
   },
   "jest": {
     "collectCoverage": true,
-    "coverageFormats": ["json", "html"]
+    "coverageFormats": [
+      "json",
+      "html"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,12 +29,16 @@
   "homepage": "https://github.com/NodeWorkshops/graphql-with-tdd#readme",
   "dependencies": {
     "apollo-server-express": "^1.1.2",
+    "axios": "^0.16.2",
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "graphql": "^0.11.3",
     "graphql-tools": "^1.2.2"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "jest": "^21.1.0",
+    "nodemon": "^1.12.1",
+    "superagent": "^3.6.0",
+    "supertest": "^3.0.0"
   }
 }
