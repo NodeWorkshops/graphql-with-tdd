@@ -3,9 +3,6 @@
 const resolvers = {
     Query: {
         status: () => "GrpahQL status: OK"
-    },
-    Book: {
-        name: () => 'bob'
     }
 }
 
