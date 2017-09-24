@@ -1,11 +1,12 @@
 // ./src/booksSchemaTests.js
+jest.mock('axios')
 
-const { graphql } = require('graphql');
-const schema = require('../schema');
+const { graphql } = require('graphql')
+const schema = require('../schema')
 
 describe('Books schema', () => {
     test('It should respond with a list of all the books', async () => {
-        const query = '{ books { name } }'
+        const query = '{ books { name, isbn } }'
         const result = await graphql(schema, query)
         expect(result.data.length).toBe(10)
         expect(result.data[0].name).toBe("A Game of Thrones")
