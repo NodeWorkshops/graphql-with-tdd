@@ -9,7 +9,7 @@ describe('Fetching books', () => {
             .post('/graphql')
             .send({'query': 'query  { books { name } }'})
         expect(response.statusCode).toBe(200)
-        expect(response.body.data.length).toBe(10)
+        expect(response.body.data.books.length).toBe(10)
     });
  });
  
