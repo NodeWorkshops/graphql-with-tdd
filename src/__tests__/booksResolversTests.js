@@ -5,7 +5,7 @@ const { Query, Book } = require('../resolvers');
 
 describe('resolvers - Query.books', () => {
     test('It should respond with the books', async () => {
-        const books = Query.books()
+        const books = await Query.books()
         expect(books.length).toBe(10)
         expect(books[0].name).toBe("A Game of Thrones")
         expect(books[0].isbn).toBe("978-0553103540")      
