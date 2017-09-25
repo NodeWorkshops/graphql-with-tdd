@@ -4,7 +4,15 @@ const resolvers = require('./resolvers')
 
 const typeDefs = `
 type Query {
-  status: String   
+  status: String,
+  books: [Book]   
+}
+type Book {
+    url: String
+    name: String
+    isbn: String
+    mediaType: String
+    released: String
 }
 `
 
