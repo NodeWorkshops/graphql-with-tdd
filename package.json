@@ -12,7 +12,8 @@
     "graphql": "^15.3.0",
     "graphql-tools": "^6.0.18",
     "moment": "^2.27.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "server": "node ./src/server.js",
