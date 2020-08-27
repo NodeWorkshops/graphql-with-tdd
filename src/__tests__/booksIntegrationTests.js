@@ -9,5 +9,6 @@ describe("Fetching books", () => {
       .send({ query: "query { books { name } } " });
     expect(response.statusCode).toBe(200);
     expect(response.body.data.books.length).toBe(10);
+    console.log(response.body.data.books)
   });
 });

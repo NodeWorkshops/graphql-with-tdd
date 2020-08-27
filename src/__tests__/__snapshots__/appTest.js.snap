@@ -3,9 +3,7 @@
 exports[`Graphql status It should respond with a success message 1`] = `
 Object {
   "data": Object {
-    "status": Object {
-      "message": "ok",
-    },
+    "status": "GraphQL status: OK",
   },
 }
 `;

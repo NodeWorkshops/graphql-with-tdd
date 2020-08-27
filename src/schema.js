@@ -1,14 +1,18 @@
-const { makeExecutableSchema } = require("graphql-tools");
+const { graphqlExpress, ApolloServer, gql } = require("apollo-server-express");
+const resolvers = require("./resolvers");
 
-const typeDefs = `
-    type Query {
-        status: String
-    }
+const typeDefs = gql`
+  type Query {
+    status: String
+    books: [Book]
+  }
+  type Book {
+    url: String
+    name: String
+    isbn: String
+    mediaType: String
+    released: String
+  }
 `;
-const resolvers = {
-  Query: {
-    status: () => "GraphQL status: OK",
-  },
-};
 
-module.exports = makeExecutableSchema({ typeDefs, resolvers });
+module.exports = new ApolloServer({ typeDefs, resolvers });
